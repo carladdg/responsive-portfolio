@@ -22,15 +22,15 @@
     background: #4aaaa5;
     display: flex;
     height: 73px;
-    margin-left: 220px;
+    margin-left: 15.25%;
     margin-right: 40px;
     width: 225px;
+    flex-shrink: 0;
 }
 
 .name h1 {
     font-size: 1.67em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
+    margin: 0.67em auto;
     font-weight: bold;
     
     color: #ffffff;
@@ -43,8 +43,9 @@
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-around;
     margin-left: 45px;
-    margin-right: 220px;
+    margin-right: 15.25%;
     width: 270px;
+    flex-shrink: 0;
 }
 
 .navigation-links a {
@@ -101,29 +102,30 @@
 .content-container {
     background: #ffffff;
     border: 1px solid #dddddd;
-    margin: 20px 40px 20px 220px;
+    margin: 20px 2% 20px 15.25%;
     width: 650px;
+    flex-shrink: 1;
 }
 
 .my-photo {
     float: left;
-    margin: 12px 15px 8px 25px;
+    margin-top: 12px; 
+    margin-right: 15px; 
+    margin-bottom: 0px; 
+    margin-left: 25px;
     width: 45%;
+    /* transition: all 0.25s; */
 }
 
 .content-container p {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
     margin-left: 25px;
     margin-right: 25px;
 
     color: #777777;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-}
-
-.content-container p:first-child {
-    margin-top: 1.5em;
 }
 
 .content-container p:last-child {
@@ -163,10 +165,10 @@
     bottom: 20px;
 }
 
-.portfolio-project:last-child:nth-child(odd) {
+/* .portfolio-project:last-child:nth-child(odd) {
     margin-left: 23px;
     margin-right: auto;
-}
+} */
 
 .contact-form {
     margin-top: 0.85em;
@@ -210,9 +212,10 @@
 .sidebar {
     background: #ffffff;
     border: 1px solid #dddddd;
-    margin: 20px 220px 20px 40px;
+    margin: 20px 15.25% 20px 2%;
     padding-bottom: 20px;
     width: 270px;
+    flex-shrink: 0;
 }
 
 .icon-container {
@@ -253,4 +256,33 @@
     font-size: 0.75em;
     text-align: center;
     width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .my-photo {
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        margin-bottom: 0;
+        padding-left: 25px;
+        padding-right: 25px;       
+        /* transition: all 0.5s, padding 0s; */
+    }
+
+    .portfolio-project:last-child:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1261px) and (min-width: 769px) {
+    .ignore {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 641px) {
+    .ignore {
+        display: none;
+    }
 }
