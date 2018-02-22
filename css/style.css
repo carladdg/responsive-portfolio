@@ -349,10 +349,16 @@
         background: #ffffff;
         border-bottom: 2px solid #cccccc;
         align-items: center;
+        transition: background 0s;
     }
 
     .page-content {
         margin-top: 123px;
+    }
+
+    .portfolio-container {
+        margin-left: 13px;
+        margin-right: 13px;
     }
 }
 
@@ -362,7 +368,7 @@
     }
 }
 
-@media screen and (max-width: 617px) {
+@media screen and (max-width: 640px) {
     .ignore {
         display: none;
     }
