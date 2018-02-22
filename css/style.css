@@ -2,6 +2,7 @@
     background-image: url("../img/circles-light.png");
     display: flex;
     flex-direction: column;
+    transition: flex-direction 0.5s;
 }
 
 .navigation-bar {
@@ -26,6 +27,7 @@
     margin-right: 40px;
     width: 225px;
     flex-shrink: 0;
+    transition: margin-left 0.5s, margin-right 0.5s;
 }
 
 .name h1 {
@@ -74,9 +76,8 @@
     margin-top: 75px;
 }
 
-.page-content h2 {
+.page-content h2, h3 {
     display: block;
-    font-size: 1.5em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
     margin-left: 0;
@@ -87,6 +88,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 25px;
     padding-right: 25px;
+}
+
+.page-content h2 {
+    font-size: 1.5em;
+}
+
+.page-content h3 {
+    font-size: 1.25em;
 }
 
 .page-content hr {
@@ -114,7 +123,6 @@
     margin-bottom: 0px; 
     margin-left: 25px;
     width: 45%;
-    /* transition: all 0.25s; */
 }
 
 .content-container p {
@@ -259,6 +267,10 @@
 }
 
 @media screen and (max-width: 980px) {
+    .content-container {
+        min-width: 280px;
+    }
+    
     .my-photo {
         float: none;
         width: 100%;
@@ -266,12 +278,81 @@
         margin-bottom: 0;
         padding-left: 25px;
         padding-right: 25px;       
-        /* transition: all 0.5s, padding 0s; */
     }
 
     .portfolio-project:last-child:nth-child(odd) {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-content {
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .name {
+        margin-left: 5%;
+        transition: 0.5s;
+    }
+
+    .navigation-links {
+        margin-right: 5%;
+        transition: 0.5s;
+    }
+
+    .content-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 0px;
+        width: 90%;
+    }
+
+    .my-photo {
+        float: left;
+        margin-top: 12px; 
+        padding-right: 0px;
+        width: 45%;
+    }
+
+    .sidebar {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .icon-container {
+        justify-content: flex-start;
+        margin-left: 22px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .navigation-bar {
+        flex-direction: column;
+    }
+
+    .name {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navigation-links {
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        background: #ffffff;
+        border-bottom: 2px solid #cccccc;
+        align-items: center;
+    }
+
+    .page-content {
+        margin-top: 123px;
     }
 }
 
@@ -281,7 +362,7 @@
     }
 }
 
-@media screen and (max-width: 641px) {
+@media screen and (max-width: 617px) {
     .ignore {
         display: none;
     }
